@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life of Pi - Journey & Literary Analysis</title>
+    <link rel="stylesheet" href="pi.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-book-journal-whills"></i> LIFE OF PI
+        </div>
+        <ul class="nav-links">
+            <li><a href="#journey">Journey</a></li>
+            <li><a href="#characters">Characters</a></li>
+            <li><a href="#booker">Booker Prize</a></li>
+            <li><a href="#analysis">Analysis</a></li>
+            <li><a href="#author">Author</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- 3D Slider -->
+    <header id="journey" class="hero-slider-container">
+        <!-- Navigation Arrows -->
+        <div class="nav-arrow prev" id="prevSlide">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="nav-arrow next" id="nextSlide">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+
+        <!-- Slider Counter -->
+        <div class="slider-counter">
+            <span class="counter-current" id="currentSlide">01</span>
+            <span class="counter-total">/03</span>
+        </div>
+
+        <div class="slider-wrapper">
+            <div class="slides-wrapper" id="slidesWrapper">
+                <!-- Slide 1 -->
+                <div class="slide active" data-index="0">
+                    <div class="slide-bg">
+                        <img src="Images/whalepi.gif" class="slider-img" alt="Lifeboat at sea">
+                    </div>
+                    <div class="hero-content">
+                        <h1>LIFE OF PI</h1>
+                        <p class="hero-subtitle">A Journey of Survival, Faith, and Wonder</p>
+                        <button class="hero-book-btn read-more-btn" data-modal="journeyModal">Read More</button>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="slide next" data-index="1">
+                    <div class="slide-bg">
+                        <img src="Images/LifeofPiGif.gif" class="slider-img" alt="Characters journey">
+                    </div>
+                    <div class="hero-content">
+                        <h1>CHARACTERS</h1>
+                        <p class="hero-subtitle">Meet the Main & Supporting Characters</p>
+                        <button class="hero-book-btn read-more-btn" data-modal="charactersModal">Read More</button>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="slide far-next" data-index="2">
+                    <div class="slide-bg">
+                        <img src="Images/bluewater.webp" class="slider-img" alt="Booker Prize">
+                    </div>
+                    <div class="hero-content">
+                        <h1>BOOKER PRIZE</h1>
+                        <p class="hero-subtitle">2002 Man Booker Prize Recipient</p>
+                        <button class="hero-book-btn read-more-btn" data-modal="bookerModal">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+            <button class="control-btn" id="playPause">
+                <i class="fas fa-pause" id="playIcon"></i>
+            </button>
+            <div class="slider-dots" id="sliderDots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+            <button class="control-btn" id="fullscreen">
+                <i class="fas fa-expand"></i>
+            </button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="slider-progress">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </header>
+
+    <!-- Modals for Read More buttons -->
+    <div id="journeyModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>The Journey of Life of Pi</h2>
+            <div class="modal-body">
+                <h3>The Epic Survival Story</h3>
+                <p>"Life of Pi" chronicles the incredible 227-day journey of Piscine Molitor "Pi" Patel across the Pacific Ocean after a catastrophic shipwreck. Stranded on a lifeboat with a Bengal tiger named Richard Parker, Pi's journey becomes a profound exploration of faith, resilience, and the human spirit.</p>
+                
+                <h4>Key Aspects of the Journey:</h4>
+                <ul>
+                    <li><strong>Survival Against All Odds:</strong> Pi survives using his knowledge of animals, religion, and human psychology</li>
+                    <li><strong>Spiritual Transformation:</strong> The journey becomes a metaphor for spiritual awakening</li>
+                    <li><strong>Human-Animal Bond:</strong> The complex relationship with Richard Parker evolves from fear to co-dependence</li>
+                    <li><strong>Reality vs. Faith:</strong> The story challenges our perception of reality and truth</li>
+                </ul>
+                
+                <h4>Literary Significance:</h4>
+                <p>The journey serves as an allegory for the human condition, exploring themes of isolation, faith, and the search for meaning in a seemingly indifferent universe.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="charactersModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Characters of Life of Pi</h2>
+            <div class="modal-body">
+                <h3>Meet the Cast</h3>
+                <p>The characters in "Life of Pi" serve both as realistic individuals and symbolic representations, creating a rich tapestry of meaning and emotion.</p>
+                
+                <h4>Main Characters:</h4>
+                <div class="character-grid">
+                    <div class="character-item">
+                        <h5>Pi Patel</h5>
+                        <p>The protagonist who survives 227 days at sea. His spiritual journey through Hinduism, Christianity, and Islam represents humanity's search for meaning.</p>
+                    </div>
+                    <div class="character-item">
+                        <h5>Richard Parker</h5>
+                        <p>The Bengal tiger who represents Pi's primal instincts and the untamable aspects of nature. Their relationship symbolizes the balance between civilization and wilderness.</p>
+                    </div>
+                    <div class="character-item">
+                        <h5>Orange Juice</h5>
+                        <p>The maternal orangutan whose presence and tragic death symbolize innocence lost and the comfort of maternal protection.</p>
+                    </div>
+                </div>
+                
+                <h4>Supporting Characters:</h4>
+                <p>From Pi's pragmatic father Santosh to his nurturing mother Gita, and the rational biology teacher Satish Kumar, each supporting character represents different aspects of belief, science, and human nature that shape Pi's worldview.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="bookerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>The Booker Prize Achievement</h2>
+            <div class="modal-body">
+                <h3>2002 Man Booker Prize Winner</h3>
+                <p>Yann Martel's "Life of Pi" won the prestigious Man Booker Prize in 2002, cementing its place as one of the most important literary works of the 21st century.</p>
+                
+                <h4>Why It Won:</h4>
+                <ul>
+                    <li><strong>Innovative Narrative Structure:</strong> The novel's frame narrative and dual storytelling approach</li>
+                    <li><strong>Philosophical Depth:</strong> Exploration of faith, reality, and storytelling</li>
+                    <li><strong>Universal Themes:</strong> Resonant across cultures and religions</li>
+                    <li><strong>Literary Excellence:</strong> Masterful prose and imaginative storytelling</li>
+                </ul>
+                
+                <h4>Impact of the Award:</h4>
+                <p>The Booker Prize win brought international recognition to Martel's work, leading to:</p>
+                <ul>
+                    <li>Worldwide bestseller status</li>
+                    <li>Translation into over 40 languages</li>
+                    <li>Academy Award-winning film adaptation</li>
+                    <li>Enduring academic and critical analysis</li>
+                </ul>
+                
+                <h4>Judges' Comments:</h4>
+                <p>"A story that will make you believe in God... A remarkable book, a bold and risky idea executed with complete confidence." - Booker Prize Judges</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- NEW Characters Slider Section -->
+    <section id="characters" class="characters-slider-section">
+        <div class="container">
+            <h2>CHARACTERS OF LIFE OF PI</h2>
+            <p class="section-subtitle">Discover the unforgettable characters who make Pi's journey both harrowing and transformative</p>
+            
+            <!-- Character Categories -->
+            <div class="character-categories">
+                <button class="category-btn active" data-category="all">All Characters</button>
+                <button class="category-btn" data-category="main">Main Characters</button>
+                <button class="category-btn" data-category="supporting">Supporting Characters</button>
+            </div>
+
+            <!-- Slider -->
+            <div class="character-slider">
+                <!-- List Items -->
+                <div class="list">
+                    <!-- Main Characters -->
+                    <div class="item active" data-category="main">
+                       <img src="Images/1pi.jpg" alt="Booker Prize">
+                        <div class="main-character-tag">MAIN CHARACTER</div>
+                        <div class="content">
+                            <p class="character-category">Protagonist</p>
+                            <h2 class="character-name">Pi Patel</h2>
+                            <p class="character-role">Piscine Molitor Patel - The Survivor</p>
+                            <p class="character-description">
+                                A 16-year-old Indian boy who survives 227 days at sea after a shipwreck. Deeply spiritual, he practices Hinduism, Christianity, and Islam simultaneously, believing each offers a path to God. His journey represents the triumph of faith and resilience in the face of overwhelming odds.
+                            </p>
+                            <div class="character-features">
+                                <div class="feature">
+                                    <h4>Age</h4>
+                                    <p>16 years old</p>
+                                </div>
+                                <div class="feature">
+                                    <h4>Religions</h4>
+                                    <p>Hinduism, Christianity, Islam</p>
+                                </div>
+                                <div class="feature">
+                                    <h4>Survival Time</h4>
+                                    <p>227 days at sea</p>
+                                </div>
+                            </div>
+                            <button class="character-read-more" data-character="pi">Read Full Profile</button>
+                        </div>
+                    </div>
+
+                    <div class="item" data-category="main">
+                      <img src="Images/richard.jpg" alt="Booker Prize">
+                        <div class="main-character-tag">MAIN CHARACTER</div>
+                        <div class="content">
+                            <p class="character-category">Animal Companion</p>
+                            <h2 class="character-name">Richard Parker</h2>
+                            <p class="character-role">Bengal Tiger - The Unlikely Companion</p>
+                            <p class="character-description">
+                                A 450-pound Bengal tiger who shares the lifeboat with Pi. Named due to a clerical error that swapped hunter and animal names, he becomes Pi's greatest challenge and unlikely companion. Richard Parker represents the wild, untamable aspects of nature and the human psyche.
+                            </p>
+                            <div class="character-features">
+                                <div class="feature">
+                                    <h4>Species</h4>
+                                    <p>Bengal Tiger</p>
+                                </div>
+                                <div class="feature">
+                                    <h4>Weight</h4>
+                                    <p>450 pounds</p>
+                                </div>
+                                <div class="feature">
+                                    <h4>Symbolism</h4>
+                                    <p>Primal Instinct, Fear</p>
+                                </div>
+                            </div>
+                            <button class="character-read-more" data-character="richard">Read Full Profile</button>
+                        </div>
+                    </div>
+
+                    <div class="item" data-category="main">
+                         <img src="Images/orangutan.jpg" alt="Booker Prize">
+                        <div class="main-character-tag">MAIN CHARACTER</div>
+                        <div class="content">
+                            <p class="character-category">Animal Companion</p>
+                            <h2 class="character-name">Orange Juice</h2>
+                            <p class="character-role">Orangutan - The Maternal Figure</p>
+                            <p class="character-description">
+                                The gentle orangutan from Pi's family zoo who floats to the lifeboat on a bundle of bananas. She represents maternal comfort, innocence, and the tragic loss of childhood. Her presence provides Pi with brief companionship and her death deeply affects him emotionally.
+                            </p>
+                            <div class="character-features">
+                                <div class="feature">
+                                    <h4>Species</h4>
+                                    <p>Orangutan</p>
+                                </div>
+                                <div class="feature">
+                                    <h4>Symbolism</h4>
+                                    <p>Motherhood, Innocence</p>
+                                </div>
+                                <div class="feature">
+                                    <h4>Arrival</h4>
+                                    <p>On banana bundle</p>
+                                </div>
+                            </div>
+                            <button class="character-read-more" data-character="orange">Read Full Profile</button>
+                        </div>
+                    </div>
+
+                    <!-- Supporting Characters -->
+                    <div class="item" data-category="supporting">
+                         <img src="Images/santosh.jpg" alt="Booker Prize">
+                        <div class="supporting-character-tag">SUPPORTING CHARACTER</div>
+                        <div class="content">
+                            <p class="character-category">Family</p>
+                            <h2 class="character-name">Santosh Patel</h2>
+                            <p class="character-role">Pi's Father - The Pragmatist</p>
+                            <p class="character-description">
+                                A pragmatic zoo keeper who teaches Pi about the dangers of wild animals through a harsh lesson with Richard Parker. His practical approach to life contrasts with Pi's spiritual nature, yet his lessons prove crucial for Pi's survival at sea.
+                            </p>
+                            <div class="character-features">
+                                <div class="feature">
+                                    <h4>Relation</h4>
+                                    <p>Father</p>
+                                </div>
+                                <div class="feature">
+                                    <h4>Occupation</h4>
+                                    <p>Zoo Keeper</p>
+                                </div>
+                                <div class="feature">
+                                    <h4>Philosophy</h4>
+                                    <p>Pragmatism</p>
+                                </div>
+                            </div>
+                            <button class="character-read-more" data-character="santosh">Read Full Profile</button>
+                        </div>
+                    </div>
+
+                    <div class="item" data-category="supporting">
+                         <img src="Images/gita.jpg" alt="Booker Prize">
+                        <div class="content">
+                            <p class="character-category">Family</p>
+                            <h2 class="character-name">Gita Patel</h2>
+                            <p class="character-role">Pi's Mother - The Nurturer</p>
+                            <p class="character-description">
+                                A botanist who nurtures Pi's spiritual curiosity and provides emotional support through his religious exploration. She represents the emotional and spiritual foundation that sustains Pi during his ordeal. Her books about plants help Pi survive.
+                            </p>
+                            <div class="character-features">
+                                <div class="feature">
+                                    <h4>Relation</h4>
+                                    <p>Mother</p>
+                                </div>
+                                <div class="feature">
+                                    <h4>Occupation</h4>
+                                    <p>Botanist</p>
+                                </div>
+                                <div class="feature">
+                                    <h4>Role</h4>
+                                    <p>Spiritual Guide</p>
+                                </div>
+                            </div>
+                            <button class="character-read-more" data-character="gita">Read Full Profile</button>
+                        </div>
+                    </div>
+
+                    <div class="item" data-category="supporting">
+                        <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Satish Kumar">
+                        <div class="supporting-character-tag">SUPPORTING CHARACTER</div>
+                        <div class="content">
+                            <p class="character-category">Teacher</p>
+                            <h2 class="character-name">Satish Kumar</h2>
+                            <p class="character-role">Biology Teacher - The Atheist</p>
+                            <p class="character-description">
+                                An atheist biology teacher who teaches Pi about science and reason, yet respects Pi's spiritual journey. He represents rational thought and scientific inquiry, providing balance to Pi's religious explorations and showing that faith and science can coexist respectfully.
+                            </p>
+                            <div class="character-features">
+                                <div class="feature">
+                                    <h4>Occupation</h4>
+                                    <p>Biology Teacher</p>
+                                </div>
+                                <div class="feature">
+                                    <h4>Philosophy</h4>
+                                    <p>Atheism, Rationalism</p>
+                                </div>
+                                <div class="feature">
+                                    <h4>Influence</h4>
+                                    <p>Scientific Mindset</p>
+                                </div>
+                            </div>
+                            <button class="character-read-more" data-character="satish">Read Full Profile</button>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- Button Arrows -->
+                <div class="character-arrows">
+                    <button id="characterPrev"><</button>
+                    <button id="characterNext">></button>
+                </div>
+
+                <!-- Thumbnail -->
+                <div class="character-thumbnail">
+                    <div class="item active">
+                        <img src="Images/1pi.jpg" alt="Booker Prize">
+                        <div class="content">
+                            Pi Patel
+                        </div>
+                    </div>
+                    <div class="item">
+                          <img src="Images/richard.jpg" alt="Booker Prize">
+                        <div class="content">
+                            Richard Parker
+                        </div>
+                    </div>
+                    <div class="item">
+                          <img src="Images/orangutan.jpg" alt="Booker Prize">
+                        <div class="content">
+                            Orange Juice
+                        </div>
+                    </div>
+                    <div class="item">
+                          <img src="Images/santosh.jpg" alt="Booker Prize">
+                        <div class="content">
+                            Santosh Patel
+                        </div>
+                    </div>
+                    <div class="item">
+                         <img src="Images/gita.jpg" alt="Booker Prize">
+                        <div class="content">
+                            Gita Patel
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Satish Kumar">
+                        <div class="content">
+                            Satish Kumar
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Character Detail Modal -->
+    <div id="characterModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="characterModalContent">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Booker Prize Section -->
+    <section id="booker" class="booker-section">
+        <div class="container">
+            <h2>THE BOOKER PRIZE EXCELLENCE</h2>
+            
+            <p class="intro-text">Exploring the prestigious literary award that recognized Life of Pi as a masterpiece of contemporary literature</p>
+            
+            <div class="content-box fade-in">
+                <h3>Introduction to the Booker Prize</h3>
+                <p>The Man Booker Prize (now The Booker Prize) is one of the world's most prestigious literary awards, awarded each year for the best original novel written in English and published in the United Kingdom. Established in 1969, it has become a symbol of literary excellence and a significant commercial boost for winning authors.</p>
+                <button class="read-more-section" data-section="booker-intro">Read More</button>
+            </div>
+
+            <div class="content-box fade-in">
+                <h3>Background of The Booker Prize</h3>
+                <p>Founded by Booker McConnell Ltd, a British food wholesale operator, the prize was created to reward fiction and elevate the prestige of the novel. Initially limited to Commonwealth, Irish, and Zimbabwean citizens, it expanded in 2014 to include any novel written in English and published in the UK.</p>
+                <button class="read-more-section" data-section="booker-background">Read More</button>
+            </div>
+
+            <div class="content-box fade-in">
+                <h3>Significance of the Booker Prize</h3>
+                <p>Winning the Booker Prize guarantees international recognition, significant sales increases (often by 500-1000%), and establishes the author as a major literary figure. The prize has launched the careers of numerous authors and brought international attention to important literary works.</p>
+                <button class="read-more-section" data-section="booker-significance">Read More</button>
+            </div>
+
+            <div class="content-box fade-in">
+                <h3>Historical Timeline of Notable Winners</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="First Booker Prize">
+                        <div class="timeline-year">1969</div>
+                        <p>P.H. Newby wins the first Booker Prize for "Something to Answer For"</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Midnight's Children">
+                        <div class="timeline-year">1981</div>
+                        <p>Salman Rushdie wins for "Midnight's Children"</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Life of Pi">
+                        <div class="timeline-year">2002</div>
+                        <p>Yann Martel wins for "Life of Pi"</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="The Gathering">
+                        <div class="timeline-year">2007</div>
+                        <p>Anne Enright wins for "The Gathering"</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Lincoln in the Bardo">
+                        <div class="timeline-year">2017</div>
+                        <p>George Saunders wins for "Lincoln in the Bardo"</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="The Testaments">
+                        <div class="timeline-year">2019</div>
+                        <p>Margaret Atwood wins for "The Testaments"</p>
+                    </div>
+                </div>
+                <button class="read-more-section" data-section="booker-timeline">Read More</button>
+            </div>
+
+            <div class="content-box fade-in">
+                <h3>Conventions on the School of Thought</h3>
+                <p>The Booker Prize has evolved through different literary periods and schools of thought:</p>
+                <div class="literary-analysis-grid">
+                    <div class="analysis-card">
+                        <h4><i class="fas fa-graduation-cap"></i> Postmodernism (1980s-1990s)</h4>
+                        <p>Celebrated experimental narratives, magical realism, and metafiction</p>
+                    </div>
+                    <div class="analysis-card">
+                        <h4><i class="fas fa-globe-americas"></i> Postcolonial Literature (1990s-2000s)</h4>
+                        <p>Embraced works exploring colonial legacies and cultural identity</p>
+                    </div>
+                    <div class="analysis-card">
+                        <h4><i class="fas fa-brain"></i> Psychological Realism (2000s-Present)</h4>
+                        <p>Focused on deep character exploration and psychological depth</p>
+                    </div>
+                </div>
+                <button class="read-more-section" data-section="booker-conventions">Read More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Detail Modal -->
+    <div id="sectionModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="sectionModalContent">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Author Biography Section -->
+    <section id="author" class="analysis-section">
+        <div class="container">
+            <h2>AUTHOR'S BIOGRAPHY</h2>
+            
+            <div class="content-box fade-in">
+                <div class="author-bio">
+                    <div class="author-image">
+                        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Yann Martel">
+                    </div>
+                    <div class="author-info">
+                        <h3>Yann Martel</h3>
+                        <p><strong>Born:</strong> June 25, 1963 in Salamanca, Spain</p>
+                        <p><strong>Nationality:</strong> Canadian</p>
+                        <p><strong>Education:</strong> Trent University, Ontario</p>
+                        <p><strong>Notable Works:</strong> Life of Pi (2001), Beatrice and Virgil (2010), The High Mountains of Portugal (2016)</p>
+                        
+                        <h4>Early Life & Career</h4>
+                        <p>Born to Canadian parents while they were studying in Spain, Martel grew up in various countries including Costa Rica, France, Mexico, and Canada. His multicultural upbringing greatly influenced his writing. Before achieving literary success, he worked various jobs including as a dishwasher, tree planter, and security guard.</p>
+                        
+                        <h4>Literary Breakthrough</h4>
+                        <p>Martel's first major success came with "Life of Pi" in 2001, which won the Man Booker Prize in 2002. The novel spent over a year on bestseller lists worldwide and was adapted into an Academy Award-winning film by Ang Lee in 2012.</p>
+                        
+                        <h4>Writing Style & Themes</h4>
+                        <p>Martel is known for his imaginative storytelling, philosophical depth, and exploration of faith, survival, and human-animal relationships. His works often blend realism with allegory and explore the boundaries between different belief systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Literary Analysis Section -->
+    <section id="analysis" class="analysis-section">
+        <div class="container">
+            <h2>LITERARY ANALYSIS</h2>
+            
+            <div class="content-box fade-in">
+                <h3>Summary of the Work</h3>
+                <p>"Life of Pi" tells the extraordinary story of Piscine Molitor "Pi" Patel, an Indian boy who survives 227 days stranded in the Pacific Ocean on a lifeboat with a Bengal tiger named Richard Parker. The novel is divided into three parts: Pi's childhood in Pondicherry where he explores multiple religions; the shipwreck and survival at sea; and the investigation in Mexico where Pi tells his story to Japanese officials.</p>
+                
+                <p>The narrative explores themes of faith, survival, and storytelling through Pi's unique perspective. The ending presents two versions of the story - one with animals and one without - leaving readers to choose which story they believe, thus exploring the nature of truth and the power of faith.</p>
+            </div>
+
+            <div class="content-box fade-in">
+                <h3>Analysis of the Literary Piece</h3>
+                
+                <div class="literary-analysis-grid">
+                    <div class="analysis-card">
+                        <h4><i class="fas fa-cross"></i> Religious Allegory</h4>
+                        <p>The novel serves as an allegory for faith and belief. Pi's practice of three religions represents the universal search for meaning. The lifeboat journey symbolizes the spiritual journey of faith through adversity.</p>
+                    </div>
+                    
+                    <div class="analysis-card">
+                        <h4><i class="fas fa-paw"></i> Human-Animal Relationships</h4>
+                        <p>The relationship between Pi and Richard Parker explores the boundaries between human and animal nature, civilization and wilderness, and the co-existence of fear and necessity in survival situations.</p>
+                    </div>
+                    
+                    <div class="analysis-card">
+                        <h4><i class="fas fa-book"></i> Narrative Structure</h4>
+                        <p>The novel employs a frame narrative with the author's note, creating multiple layers of storytelling. This structure questions the reliability of narrative and the nature of truth itself.</p>
+                    </div>
+                    
+                    <div class="analysis-card">
+                        <h4><i class="fas fa-water"></i> Survival Literature</h4>
+                        <p>As survival literature, the novel explores human resilience, adaptation, and the will to live. Pi's survival techniques and psychological coping mechanisms form a central study of human endurance.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-box fade-in">
+                <h3>What Makes the Literary Piece Great</h3>
+                
+                <div class="literary-analysis-grid">
+                    <div class="analysis-card">
+                        <h4><i class="fas fa-star"></i> Universal Themes</h4>
+                        <p>The novel explores fundamental human questions about faith, survival, and truth that resonate across cultures and generations, making it universally relevant.</p>
+                    </div>
+                    
+                    <div class="analysis-card">
+                        <h4><i class="fas fa-brain"></i> Philosophical Depth</h4>
+                        <p>Martel weaves complex philosophical questions into an accessible narrative, inviting readers to contemplate profound ideas while enjoying an engaging story.</p>
+                    </div>
+                    
+                    <div class="analysis-card">
+                        <h4><i class="fas fa-palette"></i> Literary Innovation</h4>
+                        <p>The novel's unique blend of adventure story, spiritual allegory, and metafictional elements creates a fresh and innovative literary form.</p>
+                    </div>
+                    
+                    <div class="analysis-card">
+                        <h4><i class="fas fa-users"></i> Emotional Resonance</h4>
+                        <p>The story creates deep emotional connections through Pi's journey, making readers invest in his survival and spiritual quest.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="quiz-section">
+        <div class="container">
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <h2>TEST YOUR KNOWLEDGE</h2>
+                    <p>How well do you know Life of Pi and its literary significance?</p>
+                </div>
+                
+                <div class="quiz-progress">
+                    <div class="progress-bar-quiz" id="progressBarQuiz"></div>
+                </div>
+                
+                <div id="questionContainer">
+                    <!-- Questions will be loaded here -->
+                </div>
+                
+                <div class="quiz-controls">
+                    <button id="prevBtn" onclick="prevQuestion()">Previous</button>
+                    <button id="nextBtn" onclick="nextQuestion()">Next Question</button>
+                </div>
+                
+                <div id="resultContainer" class="result-container">
+                    <h2>Quiz Complete!</h2>
+                    <div class="score-display" id="scoreDisplay">0/10</div>
+                    <p class="score-message" id="scoreMessage"></p>
+                    <button onclick="restartQuiz()">Try Again</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">LIFE OF PI ANALYSIS</div>
+                    <p>A comprehensive exploration of Yann Martel's Booker Prize-winning masterpiece, combining literary analysis with interactive learning.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#journey">Interactive Journey</a></li>
+                        <li><a href="#characters">Characters</a></li>
+                        <li><a href="#booker">Booker Prize Analysis</a></li>
+                        <li><a href="#author">Author Biography</a></li>
+                        <li><a href="#analysis">Literary Analysis</a></li>
+                        <li><a href="#quiz">Knowledge Quiz</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Literary Resources</h3>
+                    <p>Based on extensive literary research</p>
+                    <p>Academic analysis and criticism</p>
+                    <p>Complete historical context</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2024 Life of Pi Comprehensive Analysis. All rights reserved.</p>
+                <p>For educational purposes. Based on the novel by Yann Martel, winner of the 2002 Man Booker Prize.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
