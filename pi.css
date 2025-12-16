@@ -1,14 +1,14 @@
 /* --- Global Styles & Variables --- */
 :root {
-    --dark-blue: #0A141A;
-    --deep-blue: #0d1b25;
+    --dark-blue: #020b1b;
+    --deep-blue: #020816;
     --light-text: #EAEAEA;
-    --primary-color: #E2852E; /* Updated to E2852E */
-    --accent-color: #4A90E2;
-    --booker-gold: #FFD700;
+    --primary-color: #eca725;
+    --accent-color: #09478f;
+    --booker-gold: #b86800;
     --literary-brown: #8B4513;
-    --tiger-orange: #E2852E; /* Using same as primary */
-    --ocean-blue: #1a4c8c;
+    --tiger-orange: #E2852E;
+    --ocean-blue: #070e1b;
     --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -16,7 +16,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-     font-family: "Urbanist", sans-serif;
+    font-family: "Urbanist", sans-serif;
 }
 
 body {
@@ -43,7 +43,6 @@ h1, h2, h3, h4 {
 h1 {
     font-size: 4rem;
     letter-spacing: 8px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
 }
 
 h2 {
@@ -108,7 +107,7 @@ button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(10, 20, 26, 0.95);
+    background: rgba(3, 11, 32, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
@@ -156,30 +155,15 @@ button:hover {
     width: 100%;
 }
 
-.book-btn {
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 10px 25px;
-    border-radius: 25px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.book-btn:hover {
-    background: #d17522;
-    transform: translateY(-2px);
-}
-
-/* --- UPDATED 3D Slider x --- */
+/* --- UPDATED 3D Slider --- */
 .hero-slider-container {
     position: relative;
     width: 100%;
     height: 100vh;
     perspective: 2000px;
     overflow: hidden;
-    background: linear-gradient(45deg, #0A141A, #15232e);
+    background: linear-gradient(45deg, #0e152b, #010e29);
+    margin-top: 80px; /* Space for fixed navbar */
 }
 
 .slider-wrapper,
@@ -191,7 +175,6 @@ button:hover {
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Slides look like big cards */
 .slide {
     position: absolute;
     width: 65%;
@@ -283,6 +266,7 @@ button:hover {
     padding: 14px 38px;
     cursor: pointer;
     transition: var(--transition);
+    border-radius: 30px;
 }
 
 .hero-book-btn:hover {
@@ -455,8 +439,6 @@ button:hover {
 }
 
 /* --- NEW CHARACTERS SLIDER SECTION --- */
-
-
 .characters-slider-section {
     padding: 80px 0;
     background: linear-gradient(135deg, var(--dark-blue) 0%, var(--ocean-blue) 100%);
@@ -472,8 +454,8 @@ button:hover {
 
 /* Slider Container */
 .character-slider {
-    height: 80vh;
-    min-height: 700px;
+    height: 100vh;
+    min-height: 900px;
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
@@ -504,7 +486,7 @@ button:hover {
     left: 0;
     bottom: 0;
     background-image: linear-gradient(
-        to top, #000 40%, transparent
+        to top, #000 20%, transparent
     );
     border-radius: 20px;
 }
@@ -512,7 +494,7 @@ button:hover {
 .character-slider .list .item .content {
     position: absolute;
     left: 10%;
-    top: 15%;
+    top: 10%;
     width: 500px;
     max-width: 80%;
     z-index: 1;
@@ -531,7 +513,6 @@ button:hover {
     font-size: 80px;
     margin: 0;
     color: var(--primary-color);
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
 }
 
 .character-slider .list .item .content .character-role {
@@ -556,7 +537,7 @@ button:hover {
 
 .feature {
     background: rgba(226, 133, 46, 0.1);
-    padding: 15px;
+    padding: 11px;
     border-radius: 10px;
     border-left: 3px solid var(--primary-color);
 }
@@ -592,7 +573,8 @@ button:hover {
     transform: translateY(30px);
     filter: blur(20px);
     opacity: 0;
-    animation: showContent .5s .7s ease-in-out 1 forwards;
+    animation: showContent .5s .7s ease-in-out 1 forwards; 
+    text-align: left;
 }
 
 .character-slider .list .item.active .character-name {
@@ -640,63 +622,49 @@ button:hover {
 /* Thumbnail */
 .character-thumbnail {
     position: absolute;
-    bottom: 50px;
-    z-index: 11;
+    bottom: 30px;
+    right: 30px;
+    z-index: 20;
     display: flex;
-    gap: 15px;
-    width: 100%;
-    height: 200px;
-    padding: 0 50px;
-    box-sizing: border-box;
-    overflow: auto;
-    justify-content: center;
+    gap: 12px;
+    padding: 0;
+    overflow-x: auto;
 }
 
+/* Hide scrollbar */
 .character-thumbnail::-webkit-scrollbar {
-    width: 0;
+    display: none;
 }
 
 .character-thumbnail .item {
-    width: 130px;
-    height: 140px;
-    filter: brightness(.5);
-    transition: .5s;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    filter: brightness(0.5);
+    transition: 0.4s ease;
     flex-shrink: 0;
     cursor: pointer;
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
+    border: 3px solid transparent;
 }
 
+/* Thumbnail Image */
 .character-thumbnail .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-
-.character-thumbnail .item:hover img {
-    transform: scale(1.05);
+    border-radius: 50%;
 }
 
 .character-thumbnail .item.active {
     filter: brightness(1.2);
-    border: 3px solid var(--primary-color);
-    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    transform: scale(1.1);
 }
 
+/* Hide thumbnail text */
 .character-thumbnail .item .content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 10px;
-    text-align: center;
-    color: var(--booker-gold);
-    font-weight: 600;
-    border-radius: 0 0 10px 10px;
+    display: none;
 }
 
 /* Character Categories */
@@ -828,7 +796,7 @@ button:hover {
     margin-bottom: 25px;
 }
 
-/* --- APPLIED TIMELINE STYLES --- */
+/* --- IMPROVED TIMELINE STYLES --- */
 .intro-text {
     text-align: center;
     max-width: 600px;
@@ -847,28 +815,42 @@ button:hover {
 
 .timeline-item {
     text-align: center;
-    width: 150px;
+    width: 180px;
     margin: 10px;
-}
-
-.timeline-item img {
-    width: 100%;
-    height: 100px;
-    object-fit: cover;
-    border: 1px solid var(--primary-color);
-    margin-bottom: 10px;
+    padding: 20px 15px;
+    border: 1px solid rgba(226, 133, 46, 0.3);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.timeline-item img:hover {
-    transform: scale(1.05);
+.timeline-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .timeline-year {
     color: var(--booker-gold);
     font-weight: bold;
-    font-size: 1.2em;
-    margin-bottom: 10px;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+    width: 100%;
+    text-align: center;
+}
+
+.timeline-item p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #ccc;
+    text-align: center;
+    margin: 0;
 }
 
 .author-bio {
@@ -926,7 +908,7 @@ button:hover {
 /* --- Quiz Section --- */
 .quiz-section {
     padding: 100px 0;
-    background: linear-gradient(135deg, var(--dark-blue) 0%, #15232e 100%);
+    background: linear-gradient(135deg, var(--dark-blue) 0%, #04122c 100%);
 }
 
 .quiz-container {
@@ -1098,6 +1080,11 @@ button:hover {
     .character-slider .list .item .content .character-name {
         font-size: 60px;
     }
+    
+    /* Timeline for tablets */
+    .timeline-item {
+        width: calc(50% - 20px);
+    }
 }
 
 @media (max-width: 768px) {
@@ -1159,14 +1146,15 @@ button:hover {
         padding: 25px;
     }
     
+    /* Character Slider Mobile Fixes */
     .character-slider {
-        height: 60vh;
-        min-height: 500px;
+        height: 80vh;
+        min-height: 700px;
     }
     
     .character-slider .list .item .content {
         left: 5%;
-        top: 10%;
+        top: 5%;
         width: 90%;
     }
     
@@ -1175,7 +1163,7 @@ button:hover {
     }
     
     .character-features {
-        gap: 15px;
+        gap: 10px;
     }
     
     .feature {
@@ -1194,14 +1182,67 @@ button:hover {
         font-size: 20px;
     }
     
+    /* Character Thumbnail Mobile Fix */
     .character-thumbnail {
-        height: 150px;
+        position: absolute;
+        bottom: 20px;
+        right: 0;
+        left: 0;
+        z-index: 20;
+        display: flex;
+        gap: 12px;
         padding: 0 20px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        justify-content: flex-start;
+        -webkit-overflow-scrolling: touch;
+        height: 100px;
     }
     
     .character-thumbnail .item {
-        width: 120px;
-        height: 140px;
+        width: 80px;
+        height: 80px;
+        min-width: 80px;
+        min-height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        filter: brightness(0.5);
+        transition: 0.4s ease;
+        flex-shrink: 0;
+        cursor: pointer;
+        border: 3px solid transparent;
+    }
+    
+    .character-thumbnail .item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    
+    .character-thumbnail .item.active {
+        filter: brightness(1.2);
+        border-color: var(--primary-color);
+        transform: scale(1.1);
+    }
+    
+    /* Timeline for mobile */
+    .timeline {
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+        gap: 15px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        max-width: 280px;
+        margin: 10px auto;
+        text-align: left;
+        padding: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.05);
     }
 }
 
@@ -1228,12 +1269,26 @@ button:hover {
     }
 
     .timeline-item {
-        width: 130px;
+        width: 100%;
+    }
+    
+    /* Character Slider Small Mobile */
+    .character-thumbnail {
+        height: 80px;
+        padding: 0 15px;
+        gap: 8px;
+    }
+    
+    .character-thumbnail .item {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+        min-height: 60px;
     }
     
     .character-slider {
         height: 70vh;
-        min-height: 400px;
+        min-height: 600px;
     }
     
     .character-slider .list .item .content .character-name {
@@ -1241,21 +1296,12 @@ button:hover {
     }
     
     .character-categories {
-        gap: 10px;
+        gap: 8px;
     }
     
     .category-btn {
         padding: 8px 15px;
-        font-size: 0.9em;
-    }
-    
-    .character-thumbnail {
-        height: 120px;
-    }
-    
-    .character-thumbnail .item {
-        width: 100px;
-        height: 110px;
+        font-size: 0.8em;
     }
 }
 
@@ -1505,6 +1551,11 @@ button:hover {
         padding: 25px 15px;
     }
     
+    .character-slider {
+    height: 10vh;
+    min-height: 940px;
+}
+
     .close-modal {
         top: 10px;
         right: 15px;
@@ -1519,5 +1570,38 @@ button:hover {
     
     .modal-body h4 {
         font-size: 1.1em;
+    }
+}
+
+/* Alternate Story Section Styles */
+.alternate-story-section {
+    background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--dark-blue) 100%);
+}
+
+.alternate-story-section blockquote {
+    font-size: 1.2em;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-style: italic;
+    border-left: 3px solid var(--primary-color);
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+/* For larger screens, improve timeline layout */
+@media (min-width: 769px) {
+    .timeline {
+        justify-content: space-between;
+    }
+    
+    .timeline-item {
+        width: calc(33.333% - 20px);
+        min-height: 200px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .timeline-item {
+        width: calc(25% - 20px);
     }
 }
