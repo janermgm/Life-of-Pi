@@ -941,10 +941,10 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         const navbar = document.querySelector('.navbar');
         if (window.scrollY > 100) {
-            navbar.style.backgroundColor = 'rgba(10, 20, 26, 0.98)';
+            navbar.style.backgroundColor = 'rgba(3, 8, 32, 0.98)';
             navbar.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
         } else {
-            navbar.style.backgroundColor = 'rgba(10, 20, 26, 0.95)';
+            navbar.style.backgroundColor = 'rgba(3, 8, 32, 0.98)';
             navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
         }
     });
